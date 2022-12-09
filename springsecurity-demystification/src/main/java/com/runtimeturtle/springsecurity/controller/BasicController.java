@@ -1,0 +1,15 @@
+package com.runtimeturtle.springsecurity.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class BasicController {
+	
+	@RequestMapping(method = RequestMethod.GET, path = "/status")
+	public String statusCheck() {
+		return "UP";
+	}
+
+}
