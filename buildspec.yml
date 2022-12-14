@@ -21,6 +21,5 @@ artifacts:
     - appspec.yml
     - scripts/prepare_services.sh
     - scripts/deploy.sh
-  discard-paths: no
+  discard-paths: yes
   name: spring-security-server
-  exclude-paths: springsecurity-demystification/target/
