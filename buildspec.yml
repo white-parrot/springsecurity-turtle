@@ -19,7 +19,8 @@ artifacts:
   files:
     - springsecurity-demystification/target/springsecurity-demystification-0.0.1-SNAPSHOT.jar
     - appspec.yml
-    - scripts/prepare_services
-    - scripts/deploy
+    - scripts/prepare_services.sh
+    - scripts/deploy.sh
   discard-paths: yes
   name: spring-security-server
+  exclude-paths: scripts
