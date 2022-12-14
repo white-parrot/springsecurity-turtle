@@ -5,10 +5,10 @@ files:
     destination: ~/springsecurity-demystification-0.0.1-SNAPSHOT.jar
 hooks:
   BeforeInstall:
-    - location: scripts/stop_services
+    - location: prepare_services
       timeout: 300
       runas: root
   Install:
-    - location: scipts/deploy
+    - location: deploy
       timeout: 300
       runas: root
