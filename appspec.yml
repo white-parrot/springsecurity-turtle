@@ -2,13 +2,13 @@ version: 0.0
 os: linux
 files:
   - source: springsecurity-demystification-0.0.1-SNAPSHOT.jar
-    destination: ~/springsecurity-demystification-0.0.1-SNAPSHOT.jar
+    destination: ~/
 hooks:
   BeforeInstall:
-    - location: prepare_services
+    - location: scripts/prepare_services.sh
       timeout: 300
       runas: root
   Install:
-    - location: deploy
+    - location: scripts/deploy.sh
       timeout: 300
       runas: root
