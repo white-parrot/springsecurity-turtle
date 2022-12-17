@@ -33,7 +33,7 @@ artifacts:
         - scripts/deploy.sh
       name: secondary-artifact-name
       discard-paths: yes
-     artifactIdentifier:
+    artifactIdentifier:
       files:
         - appspec.yml
       discard-paths: yes
