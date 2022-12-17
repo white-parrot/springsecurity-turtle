@@ -26,3 +26,4 @@ artifacts:
     - /artifact/appspec.yml
     - /artifact/scripts/prepare_services.sh
     - /artifact/scripts/deploy.sh
+   descard-path: no
