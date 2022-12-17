@@ -21,5 +21,22 @@ artifacts:
     - appspec.yml
     - scripts/prepare_services.sh
     - scripts/deploy.sh
-  discard-paths: yes
-  name: spring-security-server
+  name: artifact-name
+  discard-paths: no | yes
+  base-directory: location
+  exclude-paths: excluded paths
+  enable-symlinks: no | yes
+  s3-prefix: prefix
+  secondary-artifacts:
+    artifactIdentifier:
+      files:
+        - scripts/prepare_services.sh
+        - scripts/deploy.sh
+      name: secondary-artifact-name
+      discard-paths: no | yes
+      base-directory: locationsecondry
+    artifactIdentifier:
+      files:
+        - appspec.yml
+      discard-paths: no | yes
+      base-directory: locationthird
