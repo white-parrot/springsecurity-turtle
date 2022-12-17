@@ -22,7 +22,7 @@ artifacts:
     - scripts/prepare_services.sh
     - scripts/deploy.sh
   name: artifact-name
-  discard-paths: no | yes
+  discard-paths: yes
   base-directory: location
   exclude-paths: excluded paths
   enable-symlinks: no | yes
@@ -33,10 +33,10 @@ artifacts:
         - scripts/prepare_services.sh
         - scripts/deploy.sh
       name: secondary-artifact-name
-      discard-paths: no | yes
+      discard-paths: no
       base-directory: locationsecondry
     artifactIdentifier:
       files:
         - appspec.yml
-      discard-paths: no | yes
+      discard-paths: yes
       base-directory: locationthird
