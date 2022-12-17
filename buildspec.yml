@@ -15,14 +15,14 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
+      - mkdir -p /artifact/scripts
+      - cp springsecurity-demystification/target/springsecurity-demystification-0.0.1-SNAPSHOT.jar /artifact/
+      - cp appspec.yml /artifact/
+      - cp scripts/prepare_services.sh /artifact/scripts
+      - scripts/deploy.sh /artifact/scripts
 artifacts:
   files:
-    - appspec.yml
-    - scripts/prepare_services.sh
-    - scripts/deploy.sh
-  discard-paths: no
-  secondary-artifacts:
-    artifactIdentifier:
-      files:
-        - springsecurity-demystification/target/springsecurity-demystification-0.0.1-SNAPSHOT.jar
-      discard-paths: no
+    - /artifact/springsecurity-demystification-0.0.1-SNAPSHOT.jar
+    - /artifact/appspec.yml
+    - /artifact/scripts/prepare_services.sh
+    - /artifact/scripts/deploy.sh
