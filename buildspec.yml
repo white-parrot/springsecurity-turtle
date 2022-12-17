@@ -23,7 +23,6 @@ artifacts:
     - scripts/deploy.sh
   name: artifact-name
   discard-paths: yes
-  base-directory: artifacts
   exclude-paths: excluded paths
   enable-symlinks: no
   s3-prefix: turtle-artifactory
@@ -34,9 +33,7 @@ artifacts:
         - scripts/deploy.sh
       name: secondary-artifact-name
       discard-paths: no
-      base-directory: artifacts/2
-    artifactIdentifier:
+     artifactIdentifier:
       files:
         - appspec.yml
       discard-paths: yes
-      base-directory: artifacts/2/3
