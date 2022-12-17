@@ -3,6 +3,8 @@ os: linux
 files:
   - source: springsecurity-demystification-0.0.1-SNAPSHOT.jar
     destination: /root/
+  - source: application.properties
+    destination: /root/
 hooks:
   BeforeInstall:
     - location: scripts/prepare_services.sh
