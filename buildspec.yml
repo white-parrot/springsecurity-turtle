@@ -17,23 +17,12 @@ phases:
       - echo Build completed on `date`
 artifacts:
   files:
-    - springsecurity-demystification/target/springsecurity-demystification-0.0.1-SNAPSHOT.jar
     - appspec.yml
     - scripts/prepare_services.sh
     - scripts/deploy.sh
-  name: artifact-name
-  discard-paths: yes
-  exclude-paths: excluded paths
-  enable-symlinks: no
-  s3-prefix: turtle-artifactory
+  discard-paths: no
   secondary-artifacts:
     artifactIdentifier:
       files:
-        - scripts/prepare_services.sh
-        - scripts/deploy.sh
-      name: secondary-artifact-name
-      discard-paths: yes
-    artifactIdentifier:
-      files:
-        - appspec.yml
+        - springsecurity-demystification/target/springsecurity-demystification-0.0.1-SNAPSHOT.jar
       discard-paths: yes
