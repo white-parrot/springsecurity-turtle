@@ -17,13 +17,15 @@ phases:
       - echo Build completed on `date`
       - mkdir -p /artifact/scripts
       - cp target/springsecurity-demystification-0.0.1-SNAPSHOT.jar /artifact/
+      - cp src/main/resource/application.properties /artifact/
       - cp ../appspec.yml /artifact/
       - cp ../scripts/prepare_services.sh /artifact/scripts
       - cp ../scripts/deploy.sh /artifact/scripts
 artifacts:
   files:
     - /artifact/springsecurity-demystification-0.0.1-SNAPSHOT.jar
+    - /artifact/application.properties
     - /artifact/appspec.yml
     - /artifact/scripts/prepare_services.sh
     - /artifact/scripts/deploy.sh
-   descard-path: no
+  descard-path: no
