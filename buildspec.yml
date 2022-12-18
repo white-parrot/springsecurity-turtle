@@ -21,7 +21,9 @@ artifacts:
     - springsecurity-demystification-0.0.1-SNAPSHOT.jar
     - application.properties
     - appspec.yml
-    - scripts/prepare_services.sh
-    - scripts/deploy.sh
+    - scripts/application_stop.sh
+    - scripts/before_install.sh
+    - scripts/after_install.sh
+    - scripts/application_start.sh
   descard-path: no
   base-directory: springsecurity-demystification/target
