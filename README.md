@@ -1,2 +1,2 @@
 # springsecurity-turtle
-A Demystification Project of Spring Security
+A Demystification Project of Spring Security Microservice
